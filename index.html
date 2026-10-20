@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#100e0c" />
+    <title>楚漢・棋陣 3D</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="turn-banner"><span class="ornament">❧</span><span id="round-label">第 1 回合</span><span class="ornament">❧</span></header>
+      <aside class="commander red-commander"><div class="war-flag">帥</div><div class="side-label">玩家<small>紅方・先手</small></div><p>金戈鐵馬<br />一局之間，定天下</p></aside>
+      <main class="game-layout">
+        <section class="board-frame">
+          <div class="board-topline"><span>漢・赤壁軍</span><span class="battle-status" id="status">請選擇棋子</span><span>楚・西涼軍</span></div>
+          <div class="board3d" id="board3d"><div class="loading">戰場載入中…</div></div>
+          <div class="board-foot"><span>楚 河</span><span class="river-mark">九州棋局・漢楚相爭</span><span>漢 界</span></div>
+        </section>
+        <aside class="battle-panel">
+          <div class="panel-head"><span>⚔</span><div><b>戰門記錄</b><small>CHU · HAN CAMPAIGN</small></div></div>
+          <div class="turn-summary"><span class="turn-dot"></span><span id="turn-copy">紅方先行</span></div>
+          <div class="move-log" id="move-log"></div>
+          <div class="combat-card"><div class="combat-image" id="combat-image"></div><b id="combat-title">戰鼓已鳴</b><small id="combat-copy">點選紅方棋子，開始交鋒</small></div>
+          <div class="controls"><button id="undo">↶ 悔棋</button><button id="new-game">⟳ 重開</button><button id="pause">Ⅱ 暫停</button><button id="sound">♫ 音效</button></div>
+          <div class="panel-footer">點棋子查看合法走位・再點亮起的交叉點落子</div>
+        </aside>
+      </main>
+      <aside class="commander blue-commander"><div class="war-flag">將</div><div class="side-label">電腦<small>黑方・楚漢軍</small></div><p>虎視中原<br />一戰定鼎天下</p></aside>
+      <div class="cinema" id="cinema" aria-hidden="true"><div class="cinema-backdrop" id="cinema-backdrop"></div><div class="cinema-vignette"></div><div class="cinema-caption"><span class="caption-kicker">斬將奪旗</span><strong id="cinema-title">兵刃相交</strong><small id="cinema-subtitle">一擊定勝負</small></div><div class="cinema-flash"></div></div>
+      <div class="toast" id="toast"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
